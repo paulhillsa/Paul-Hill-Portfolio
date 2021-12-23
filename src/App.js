@@ -2,7 +2,7 @@ import './App.css';
 
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
-import createHistory from 'history/createBrowserHistory'
+import createHistory from 'history'
 import ReactGA from "react-ga";
 
 import Main from './Components/Main'
