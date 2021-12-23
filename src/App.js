@@ -1,6 +1,7 @@
 import './App.css';
 
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import Analytics from 'react-router-ga';
 
 import Main from './Components/Main'
 import Header from './Components/Header';
@@ -43,10 +44,12 @@ function App() {
       </link>
 
       <Router>
+        <Analytics id="UA-ANALYTICS-1">
         <Routes>
           <Route exact path="/" element={<Main />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+      </Analytics>
       </Router>
     </div>
   );
