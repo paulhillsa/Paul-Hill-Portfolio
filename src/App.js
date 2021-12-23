@@ -2,9 +2,6 @@ import './App.css';
 
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
-import createHistory from 'history'
-import ReactGA from "react-ga";
-
 import Main from './Components/Main'
 import Header from './Components/Header';
 import LandingPage from './Components/LandingPage';
@@ -17,16 +14,9 @@ import Projects from './Components/Projects';
 import Contact from './Components/Contact';
 import Footer from './Components/Footer';
 
-const history = createHistory()
-ReactGA.initialize('UA-000000-1');
-history.listen((location, action) => {
-    ReactGA.pageview(location.pathname + location.search);
-    console.log(location.pathname)
-});
-
 function App() {
   return (
-    <div className="App" history={history}>
+    <div className="App">
       {/* Bootrap */}
       <link
         rel="stylesheet"
